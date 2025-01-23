@@ -2,7 +2,7 @@ name: Build site
 
 on:
   push:
-    branches: ['gh_pages']
+    branches: ['gh-pages']
 
   workflow_dispatch:
 
