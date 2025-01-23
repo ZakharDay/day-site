@@ -1,0 +1,254 @@
+:root {
+  --background-color: #ededed;
+  --default-text-color: #5c5c5c;
+  --muted-text-color: #a3a3a3;
+  --border-color: #d1d1d1;
+
+  --logo-width: 84px;
+  --logo-height: 44px;
+  --mainmenu-font-size: 98px;
+  --h2-font-size: 32px;
+  --p-font-size: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1a1a1a;
+    --default-text-color: #a3a3a3;
+    --muted-text-color: #5c5c5c;
+    --border-color: #3b3b3b;
+  }
+}
+
+@media (max-width: 1600px) {
+  :root {
+    /* --logo-width: 84px; */
+    /* --logo-height: 44px; */
+    --mainmenu-font-size: 88px;
+    --h2-font-size: 28px;
+    --p-font-size: 18px;
+  }
+}
+
+@media (max-width: 1440px) {
+  :root {
+    /* --logo-width: 84px; */
+    /* --logo-height: 44px; */
+    --mainmenu-font-size: 72px;
+    --h2-font-size: 24px;
+    --p-font-size: 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+  :root {
+    /* --logo-width: 84px; */
+    /* --logo-height: 44px; */
+    /* --mainmenu-font-size: 72px;
+    --h2-font-size: 24px;
+    --p-font-size: 15px; */
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  gap: 0;
+  font-family: 'PT Root UI', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  background-color: var(--background-color);
+
+  &#index {
+    section.left {
+      grid-column: 1 / 4;
+    }
+
+    section.center {
+      grid-column: 4/17;
+    }
+
+    section.right {
+      grid-column: 17/25;
+
+      article {
+        padding: 40px 40px 0 40px;
+      }
+    }
+  }
+
+  &:not(#index) {
+    section.left {
+      grid-column: 1 / 7;
+    }
+
+    section.right {
+      grid-column: 7/25;
+
+      article {
+        padding: 40px 0 0;
+      }
+    }
+  }
+}
+
+section.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 0 40px 40px;
+
+  .mainMenu {
+    /* margin-top: 62px; */
+    /* margin-left: 40px; */
+    font-size: 33px;
+    line-height: 120%;
+  }
+
+  .moreMenu {
+    font-size: 20px;
+    line-height: 150%;
+
+    a {
+      display: block;
+      margin-right: 0;
+    }
+  }
+}
+
+section.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px 0 40px 0;
+
+  .mainMenu {
+    /* margin-top: 80px; */
+    font-size: var(--mainmenu-font-size);
+    line-height: 88%;
+  }
+}
+
+.homeButton {
+  display: block;
+  width: var(--logo-width);
+  height: var(--logo-height);
+  /* margin-top: 40px; */
+  /* margin-left: 40px; */
+  background-image: url('../images/day.svg');
+}
+
+.mainMenu {
+  font-family: 'Arial Narrow', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  a {
+    display: inline-block;
+    float: left;
+    clear: left;
+    color: var(--muted-text-color);
+    text-decoration: none;
+
+    &:hover,
+    &.hover,
+    &.active {
+      color: var(--default-text-color);
+    }
+  }
+}
+
+.moreMenu {
+  font-family: 'Arial Narrow', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  a {
+    display: inline-block;
+    margin-right: 20px;
+    color: var(--muted-text-color);
+    text-decoration: none;
+
+    &:hover,
+    &.hover,
+    &.active {
+      color: var(--default-text-color);
+    }
+  }
+}
+
+.languageButton {
+  font-family: 'Arial Narrow', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--muted-text-color);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--default-text-color);
+  }
+}
+
+section.right {
+  overflow-y: scroll;
+
+  &:not(#index) {
+    border-left: solid 1px var(--border-color);
+  }
+
+  article {
+    max-width: 720px;
+    /* padding: 40px 40px 0 40px; */
+    margin: 0 auto;
+    font-family: 'PT Root UI', Arial, Helvetica, sans-serif;
+
+    h2 {
+      color: var(--default-text-color);
+      font-size: var(--h2-font-size);
+      font-weight: 700;
+      line-height: 140%;
+    }
+
+    p {
+      margin-top: 20px;
+      color: var(--default-text-color);
+      font-size: var(--p-font-size);
+      font-weight: 400;
+      line-height: 165%;
+    }
+  }
+}
+
+.zakharday {
+  width: 100%;
+  height: auto;
+  margin-bottom: 32px;
+}
+
+body#index .zakharday {
+  aspect-ratio: 495 / 659;
+  background-image: url(../images/zakharday.jpg);
+
+  filter: grayscale();
+  mix-blend-mode: hard-light;
+
+  &:hover {
+    filter: none;
+    mix-blend-mode: normal;
+  }
+}
+
+body#about .zakharday {
+  aspect-ratio: 720 / 502;
+  background-image: url(../images/zakharday_about.jpg);
+}
