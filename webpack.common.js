@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 const webpack = require('webpack')
 const path = require('path')
@@ -69,6 +70,13 @@ module.exports = {
     ]
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/favicons', to: 'favicons' },
+        { from: 'src/share', to: 'share' }
+      ]
+    }),
+
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
@@ -275,6 +283,15 @@ module.exports = {
 
     new HtmlWebpackPartialsPlugin([
       {
+        path: path.join(__dirname, './src/partials/favicons.html'),
+        location: 'favicons',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
         path: path.join(__dirname, './src/partials/mainmenu.html'),
         location: 'mainmenu',
         template_filename: '*',
@@ -304,6 +321,24 @@ module.exports = {
       {
         path: path.join(__dirname, './src/partials/mainmenu_internal_ru.html'),
         location: 'mainmenu_internal_ru',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/metatags.html'),
+        location: 'metatags',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/metatags_ru.html'),
+        location: 'metatags_ru',
         template_filename: '*',
         priority: 'replace'
       }

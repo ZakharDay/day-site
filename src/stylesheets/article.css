@@ -1,0 +1,155 @@
+body:not(#index) {
+  --document-article-width: 744px;
+  --document-article-padding-horizontal: 52px;
+  --document-article-padding-bottom: 52px;
+  /* --document-heading-1-font-size: 36px;
+  --document-heading-1-line-height: 50px;
+  --document-heading-1-margin-top: 52px; */
+  --document-heading-1-font-size: 30px;
+  --document-heading-1-line-height: 42px;
+  --document-heading-1-margin-top: 52px;
+  --document-heading-2-font-size: 26px;
+  --document-heading-2-line-height: 36px;
+  --document-heading-2-margin-top: 52px;
+  --document-descriptor-font-size: 20px;
+  --document-descriptor-line-height: 28px;
+  --document-descriptor-margin-top: 6px;
+  --document-paragraph-font-size: 20px;
+  --document-paragraph-line-height: 32px;
+  --document-paragraph-margin-top: 16px;
+  --document-p-list-margin-top: 6px;
+  --document-list-p-margin-top: 18px;
+  --document-list-list-margin-top: 6px;
+  --document-list-list-margin-bottom: 12px;
+  --document-list-list-margin-left: 12px;
+  --document-li-font-size: 20px;
+  --document-li-line-height: 30px;
+  --document-li-margin-top: 8px;
+}
+
+article {
+  h1 {
+    margin-top: var(--document-heading-1-margin-top);
+    font-size: var(--document-heading-1-font-size);
+    line-height: var(--document-heading-1-line-height);
+    font-weight: var(--document-heading-1-font-weight);
+    font-style: var(--document-heading-1-font-style);
+    color: var(--default-text-color);
+  }
+
+  h2 {
+    margin-top: var(--document-heading-2-margin-top);
+    font-size: var(--document-heading-2-font-size);
+    line-height: var(--document-heading-2-line-height);
+    font-weight: var(--document-heading-2-font-weight);
+    font-style: var(--document-heading-2-font-style);
+    color: var(--default-text-color);
+  }
+
+  h3 {
+    margin-top: var(--document-heading-3-margin-top);
+    font-size: var(--document-heading-3-font-size);
+    line-height: var(--document-heading-3-line-height);
+    font-weight: var(--document-heading-3-font-weight);
+    font-style: var(--document-heading-3-font-style);
+    color: var(--default-text-color);
+  }
+
+  p {
+    margin-top: var(--document-paragraph-margin-top);
+    font-size: var(--document-paragraph-font-size);
+    line-height: var(--document-paragraph-line-height);
+    font-weight: var(--document-paragraph-font-weight);
+    font-style: var(--document-paragraph-font-style);
+    color: var(--default-text-color);
+  }
+
+  p.descriptor {
+    margin-top: var(--document-descriptor-margin-top);
+    font-size: var(--document-descriptor-font-size);
+    line-height: var(--document-descriptor-line-height);
+    font-weight: var(--document-descriptor-font-weight);
+    font-style: var(--document-descriptor-font-style);
+    color: var(--default-text-color);
+  }
+
+  li {
+    margin-top: var(--document-li-margin-top);
+    font-size: var(--document-li-font-size);
+    line-height: var(--document-li-line-height);
+    font-weight: var(--document-li-font-weight);
+    font-style: var(--document-li-font-style);
+    color: var(--default-text-color);
+  }
+
+  ul {
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+
+  ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+  }
+
+  ul ul,
+  ol ul {
+    margin-top: var(--document-list-list-margin-top);
+    margin-bottom: var(--document-list-list-margin-bottom);
+    margin-left: var(--document-list-list-margin-left);
+    list-style-type: circle;
+    list-style-position: inside;
+  }
+
+  ol ol,
+  ul ol {
+    margin-top: var(--document-list-list-margin-top);
+    margin-bottom: var(--document-list-list-margin-bottom);
+    margin-left: var(--document-list-list-margin-left);
+    list-style-type: lower-latin;
+    list-style-position: inside;
+  }
+
+  ol + ol,
+  ul + ul,
+  ol + ul,
+  ul + ol {
+    margin-top: var(--document-list-p-margin-top);
+  }
+
+  p + ol {
+    margin-top: var(--document-p-list-margin-top);
+  }
+
+  p + ul {
+    margin-top: var(--document-p-list-margin-top);
+  }
+
+  ol + p {
+    margin-top: var(--document-list-p-margin-top);
+  }
+
+  ul + p {
+    margin-top: var(--document-list-p-margin-top);
+  }
+
+  a {
+    color: var(--text-link);
+  }
+
+  a:link {
+    color: var(--text-link);
+  }
+
+  a:visited {
+    color: var(--text-link-visited);
+  }
+
+  a:hover {
+    color: var(--text-link-hover);
+  }
+
+  a:active {
+    color: var(--text-primary);
+  }
+}
