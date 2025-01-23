@@ -6,6 +6,7 @@ html,
 body {
   min-width: 360px;
   height: 100%;
+  min-height: 100vh;
 }
 
 body {
@@ -48,6 +49,12 @@ body {
       }
     }
   }
+}
+
+section.left,
+section.center,
+section.right {
+  min-height: 100vh;
 }
 
 section.left {
