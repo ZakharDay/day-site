@@ -5,9 +5,11 @@ function initMainMenu() {
 
   if (menu) {
     menu.childNodes.forEach((link) => {
-      link.addEventListener('mouseenter', (e) => {
-        loadPageOnHover(link)
-      })
+      if (link.tagName == 'a') {
+        link.addEventListener('mouseenter', (e) => {
+          loadPageOnHover(link)
+        })
+      }
     })
   }
 }
@@ -17,9 +19,11 @@ function initMoreMenu() {
 
   if (menu) {
     menu.childNodes.forEach((link) => {
-      link.addEventListener('mouseenter', (e) => {
-        loadPageOnHover(link)
-      })
+      if (link.tagName == 'a') {
+        link.addEventListener('mouseenter', (e) => {
+          loadPageOnHover(link)
+        })
+      }
     })
   }
 }
@@ -29,7 +33,9 @@ function initMainMenuInternal() {
 
   if (menu) {
     menu.childNodes.forEach((link) => {
-      checkAndMarkCurrentPage(link)
+      if (link.tagName == 'a') {
+        checkAndMarkCurrentPage(link)
+      }
     })
   }
 }
@@ -39,7 +45,9 @@ function initMoreMenuInternal() {
 
   if (menu) {
     menu.childNodes.forEach((link) => {
-      checkAndMarkCurrentPage(link)
+      if (link.tagName == 'a') {
+        checkAndMarkCurrentPage(link)
+      }
     })
   }
 }

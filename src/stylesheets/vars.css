@@ -18,7 +18,7 @@
 
   --h2-font-size: 32px;
   --p-font-size: 20px;
-  --index-right-content-bar-padding: 40px 40px 0 40px;
+  --index-right-content-bar-padding: 40px;
 
   --document-article-width: 664px;
   --document-article-padding-horizontal: 48px;
@@ -57,6 +57,7 @@
   --document-li-margin-top: 6px;
   --document-li-font-style: normal;
   --document-li-font-weight: 400;
+  --document-list-p-margin-top: 18px;
 }
 
 @media (prefers-color-scheme: dark) {
