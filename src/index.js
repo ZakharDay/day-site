@@ -5,7 +5,7 @@ function initMainMenu() {
 
   if (menu) {
     menu.childNodes.forEach((link) => {
-      if (link.tagName == 'a') {
+      if (link.tagName == 'A') {
         link.addEventListener('mouseenter', (e) => {
           loadPageOnHover(link)
         })
@@ -19,7 +19,7 @@ function initMoreMenu() {
 
   if (menu) {
     menu.childNodes.forEach((link) => {
-      if (link.tagName == 'a') {
+      if (link.tagName == 'A') {
         link.addEventListener('mouseenter', (e) => {
           loadPageOnHover(link)
         })
@@ -33,7 +33,7 @@ function initMainMenuInternal() {
 
   if (menu) {
     menu.childNodes.forEach((link) => {
-      if (link.tagName == 'a') {
+      if (link.tagName == 'A') {
         checkAndMarkCurrentPage(link)
       }
     })
@@ -45,7 +45,7 @@ function initMoreMenuInternal() {
 
   if (menu) {
     menu.childNodes.forEach((link) => {
-      if (link.tagName == 'a') {
+      if (link.tagName == 'A') {
         checkAndMarkCurrentPage(link)
       }
     })
