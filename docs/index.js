@@ -5,9 +5,11 @@ function initMainMenu() {
   var menu = document.querySelector('section.center menu.mainMenu');
   if (menu) {
     menu.childNodes.forEach(function (link) {
-      link.addEventListener('mouseenter', function (e) {
-        loadPageOnHover(link);
-      });
+      if (link.tagName == 'a') {
+        link.addEventListener('mouseenter', function (e) {
+          loadPageOnHover(link);
+        });
+      }
     });
   }
 }
@@ -15,9 +17,11 @@ function initMoreMenu() {
   var menu = document.querySelector('section.center menu.moreMenu');
   if (menu) {
     menu.childNodes.forEach(function (link) {
-      link.addEventListener('mouseenter', function (e) {
-        loadPageOnHover(link);
-      });
+      if (link.tagName == 'a') {
+        link.addEventListener('mouseenter', function (e) {
+          loadPageOnHover(link);
+        });
+      }
     });
   }
 }
@@ -25,7 +29,9 @@ function initMainMenuInternal() {
   var menu = document.querySelector('section.left menu.mainMenu');
   if (menu) {
     menu.childNodes.forEach(function (link) {
-      checkAndMarkCurrentPage(link);
+      if (link.tagName == 'a') {
+        checkAndMarkCurrentPage(link);
+      }
     });
   }
 }
@@ -33,7 +39,9 @@ function initMoreMenuInternal() {
   var menu = document.querySelector('section.left menu.moreMenu');
   if (menu) {
     menu.childNodes.forEach(function (link) {
-      checkAndMarkCurrentPage(link);
+      if (link.tagName == 'a') {
+        checkAndMarkCurrentPage(link);
+      }
     });
   }
 }
