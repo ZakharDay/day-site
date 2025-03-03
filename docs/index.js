@@ -5,7 +5,7 @@ function initMainMenu() {
   var menu = document.querySelector('section.center menu.mainMenu');
   if (menu) {
     menu.childNodes.forEach(function (link) {
-      if (link.tagName == 'a') {
+      if (link.tagName == 'A') {
         link.addEventListener('mouseenter', function (e) {
           loadPageOnHover(link);
         });
@@ -17,7 +17,7 @@ function initMoreMenu() {
   var menu = document.querySelector('section.center menu.moreMenu');
   if (menu) {
     menu.childNodes.forEach(function (link) {
-      if (link.tagName == 'a') {
+      if (link.tagName == 'A') {
         link.addEventListener('mouseenter', function (e) {
           loadPageOnHover(link);
         });
@@ -29,7 +29,7 @@ function initMainMenuInternal() {
   var menu = document.querySelector('section.left menu.mainMenu');
   if (menu) {
     menu.childNodes.forEach(function (link) {
-      if (link.tagName == 'a') {
+      if (link.tagName == 'A') {
         checkAndMarkCurrentPage(link);
       }
     });
@@ -39,7 +39,7 @@ function initMoreMenuInternal() {
   var menu = document.querySelector('section.left menu.moreMenu');
   if (menu) {
     menu.childNodes.forEach(function (link) {
-      if (link.tagName == 'a') {
+      if (link.tagName == 'A') {
         checkAndMarkCurrentPage(link);
       }
     });
