@@ -132,6 +132,12 @@ section.center {
     color: var(--muted-text-color);
     text-decoration: none;
 
+    &:link,
+    &:visited {
+      color: var(--muted-text-color);
+      text-decoration: none;
+    }
+
     &:hover,
     &.hover,
     &.active {
@@ -153,6 +159,12 @@ section.center {
     margin-right: 20px;
     color: var(--muted-text-color);
     text-decoration: none;
+
+    &:link,
+    &:visited {
+      color: var(--muted-text-color);
+      text-decoration: none;
+    }
 
     &:hover,
     &.hover,
