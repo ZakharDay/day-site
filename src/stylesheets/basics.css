@@ -7,6 +7,7 @@ body {
   min-width: 360px;
   height: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 body {
@@ -62,10 +63,6 @@ body {
       }
     }
   }
-}
-
-li {
-  list-style-position: outside;
 }
 
 section.left,
@@ -254,7 +251,7 @@ body#about .zakharday {
 
     section.right {
       article {
-        padding: 40px;
+        padding: 40px 40px 120px 40px;
       }
     }
   }
@@ -305,6 +302,34 @@ body#about .zakharday {
         position: absolute;
         right: 40px;
         bottom: 40px;
+      }
+      /* 
+      .left {
+        display: none;
+      } */
+
+      .center {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+
+        * {
+          pointer-events: all;
+        }
+      }
+    }
+
+    &:not(#index) {
+      section.right {
+        overflow-y: scroll;
+
+        article {
+          /* max-width: calc(100% - 40px); */
+          max-width: 100%;
+        }
       }
     }
   }
