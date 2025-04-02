@@ -23,11 +23,6 @@
   --document-article-width: 664px;
   --document-article-padding-horizontal: 48px;
   --document-article-padding-bottom: 48px;
-  /* --document-heading-1-font-size: 34px;
-  --document-heading-1-line-height: 48px;
-  --document-heading-1-margin-top: 48px;
-  --document-heading-1-font-style: normal;
-  --document-heading-1-font-weight: 700; */
   --document-heading-1-font-size: 28px;
   --document-heading-1-line-height: 40px;
   --document-heading-1-margin-top: 48px;
@@ -71,8 +66,6 @@
 
 @media (max-width: 1600px) {
   :root {
-    /* --logo-width: 84px; */
-    /* --logo-height: 44px; */
     --mainmenu-font-size: 88px;
     --h2-font-size: 28px;
     --p-font-size: 18px;
@@ -82,8 +75,6 @@
 
 @media (max-width: 1440px) {
   :root {
-    /* --logo-width: 84px; */
-    /* --logo-height: 44px; */
     --mainmenu-font-size: 72px;
     --h2-font-size: 24px;
     --p-font-size: 15px;
@@ -93,7 +84,6 @@
 
 @media (max-width: 1043px) {
   :root {
-    /* --mainmenu-font-size: 32px; */
     --mainmenu-font-size: 68px;
     --mainmenu-line-height: 120%;
     --moremenu-font-size: 38px;
