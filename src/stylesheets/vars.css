@@ -84,9 +84,9 @@
 
 @media (max-width: 1043px) {
   :root {
-    --mainmenu-font-size: 68px;
+    --mainmenu-font-size: 32px;
     --mainmenu-line-height: 120%;
-    --moremenu-font-size: 38px;
+    --moremenu-font-size: 22px;
     --moremenu-line-height: 140%;
   }
 }

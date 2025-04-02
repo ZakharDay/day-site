@@ -3,12 +3,15 @@ body:not(#index) {
   --document-article-width: 720px;
   --document-article-padding-horizontal: 52px;
   --document-article-padding-bottom: 52px;
+
   --document-heading-1-font-size: 30px;
   --document-heading-1-line-height: 42px;
   --document-heading-1-margin-top: 52px;
+
   --document-heading-2-font-size: 26px;
   --document-heading-2-line-height: 36px;
   --document-heading-2-margin-top: 52px;
+
   --document-descriptor-font-size: 20px;
   --document-descriptor-line-height: 28px;
   --document-descriptor-margin-top: 6px;
@@ -30,23 +33,33 @@ body:not(#index) {
 
 @media (max-width: 1043px) {
   body:not(#index) {
-    --document-heading-1-line-height: 56px;
-    --document-heading-1-margin-top: 52px;
-    --document-heading-2-line-height: 48px;
-    --document-heading-2-margin-top: 64px;
+    --document-heading-1-font-size: 24px;
+    --document-heading-1-line-height: 34px;
+    --document-heading-1-margin-top: 12px;
+
+    --document-heading-2-font-size: 22px;
+    --document-heading-2-line-height: 32px;
+    --document-heading-2-margin-top: 48px;
+
     --document-descriptor-line-height: 28px;
     --document-descriptor-margin-top: 6px;
-    --document-paragraph-line-height: 48px;
-    --document-paragraph-margin-top: 36px;
+
+    --document-paragraph-font-size: 18px;
+    --document-paragraph-line-height: 30px;
+    --document-paragraph-margin-top: 12px;
+
     --document-p-list-margin-top: 12px;
     --document-list-p-margin-top: 36px;
     --document-list-list-margin-top: 18px;
     --document-list-list-margin-bottom: 18px;
     --document-list-list-margin-left: 12px;
-    --document-li-line-height: 48px;
-    --document-li-margin-top: 12px;
-    --list-bullet-font-size: 48px;
-    --list-bullet-left: 40px;
+
+    --document-li-font-size: 18px;
+    --document-li-line-height: 30px;
+    --document-li-margin-top: 6px;
+
+    --list-bullet-font-size: 30px;
+    --list-bullet-left: 24px;
   }
 }
 
