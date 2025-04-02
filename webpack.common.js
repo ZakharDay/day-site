@@ -200,6 +200,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
+      template: './src/ru/expertise.html',
+      filename: './ru/expertise.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
       template: './src/ru/projects.html',
       filename: './ru/projects.html',
       chunks: ['index']
@@ -216,8 +224,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/ru/mentorship.html',
-      filename: './ru/mentorship.html',
+      template: './src/ru/services.html',
+      filename: './ru/services.html',
       chunks: ['index']
     }),
 
@@ -280,6 +288,15 @@ module.exports = {
     }),
 
     // PARTIALS
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/settings.html'),
+        location: 'settings',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
 
     new HtmlWebpackPartialsPlugin([
       {

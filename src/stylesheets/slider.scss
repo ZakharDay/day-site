@@ -116,3 +116,16 @@
     }
   }
 }
+
+@media (max-width: 1043px) {
+  .slider {
+    .imagesRailWrapper {
+      .imagesRail {
+        .image {
+          width: calc(100vw - 40px);
+          min-width: calc(100vw - 40px);
+        }
+      }
+    }
+  }
+}
