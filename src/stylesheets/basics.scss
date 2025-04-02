@@ -32,6 +32,7 @@ body {
 
       article {
         padding: var(--index-right-content-bar-padding);
+        border-left: solid 1px var(--border-color);
       }
     }
   }
@@ -185,10 +186,6 @@ section.center {
 
 section.right {
   overflow-y: scroll;
-
-  &:not(#index) {
-    border-left: solid 1px var(--border-color);
-  }
 
   article {
     // max-width: 720px;
