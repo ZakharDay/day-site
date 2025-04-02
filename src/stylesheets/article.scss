@@ -1,10 +1,8 @@
 body:not(#index) {
-  --document-article-width: 744px;
+  // --document-article-width: 744px;
+  --document-article-width: 720px;
   --document-article-padding-horizontal: 52px;
   --document-article-padding-bottom: 52px;
-  /* --document-heading-1-font-size: 36px;
-  --document-heading-1-line-height: 50px;
-  --document-heading-1-margin-top: 52px; */
   --document-heading-1-font-size: 30px;
   --document-heading-1-line-height: 42px;
   --document-heading-1-margin-top: 52px;
@@ -32,19 +30,12 @@ body:not(#index) {
 
 @media (max-width: 1043px) {
   body:not(#index) {
-    /* --document-article-width: 744px; */
-    /* --document-article-padding-horizontal: 52px; */
-    /* --document-article-padding-bottom: 52px; */
-    /* --document-heading-1-font-size: 30px; */
     --document-heading-1-line-height: 56px;
     --document-heading-1-margin-top: 52px;
-    /* --document-heading-2-font-size: 26px; */
     --document-heading-2-line-height: 48px;
     --document-heading-2-margin-top: 64px;
-    /* --document-descriptor-font-size: 20px; */
     --document-descriptor-line-height: 28px;
     --document-descriptor-margin-top: 6px;
-    /* --document-paragraph-font-size: 20px; */
     --document-paragraph-line-height: 48px;
     --document-paragraph-margin-top: 36px;
     --document-p-list-margin-top: 12px;
@@ -52,10 +43,8 @@ body:not(#index) {
     --document-list-list-margin-top: 18px;
     --document-list-list-margin-bottom: 18px;
     --document-list-list-margin-left: 12px;
-    /* --document-li-font-size: 20px; */
     --document-li-line-height: 48px;
     --document-li-margin-top: 12px;
-
     --list-bullet-font-size: 48px;
     --list-bullet-left: 40px;
   }
@@ -89,6 +78,10 @@ article {
     color: var(--default-text-color);
   }
 
+  b {
+    font-weight: bold;
+  }
+
   p {
     margin-top: var(--document-paragraph-margin-top);
     font-size: var(--document-paragraph-font-size);
@@ -117,7 +110,6 @@ article {
   }
 
   ul {
-    /* list-style-type: disc; */
     list-style-type: none;
     list-style-position: inside;
   }
@@ -199,5 +191,11 @@ article {
 
   a:active {
     color: var(--text-primary);
+  }
+
+  iframe {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    margin-top: var(--document-paragraph-margin-top);
   }
 }

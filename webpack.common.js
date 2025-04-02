@@ -9,7 +9,8 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    index: './src/index.js'
+    index: './src/index.js',
+    slider: './src/javascript/slider.js'
   },
   output: {
     filename: '[name].js',
@@ -268,6 +269,14 @@ module.exports = {
       template: './src/ru/contact.html',
       filename: './ru/contact.html',
       chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/ru/interaction-parametric-design.html',
+      filename: './ru/interaction-parametric-design.html',
+      chunks: ['index', 'slider']
     }),
 
     // PARTIALS

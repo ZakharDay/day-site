@@ -1,0 +1,118 @@
+.slider {
+  position: relative;
+  margin: 40px 0;
+
+  .imagesRailWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    // margin: 0 auto;
+    // overflow: hidden;
+    overflow-y: scroll;
+    font-size: 0;
+
+    .imagesRail {
+      position: absolute;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      // align-items: stretch;
+      gap: 0;
+      // width: 100%;
+      height: 100%;
+      transition: all 0.3s ease-in-out;
+
+      .image {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // width: 100%;
+        width: var(--document-article-width);
+        min-width: var(--document-article-width);
+        height: 100%;
+        overflow: hidden;
+
+        img {
+          object-fit: contain;
+        }
+
+        &.portrait,
+        &.square {
+          img {
+            width: auto;
+            height: 100%;
+          }
+        }
+
+        &.landscape {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .caption {
+    margin-top: calc(var(--document-paragraph-margin-top) / 2);
+    margin-bottom: var(--document-paragraph-margin-top);
+    font-size: var(--document-paragraph-font-size);
+    line-height: var(--document-paragraph-line-height);
+    font-weight: var(--document-paragraph-font-weight);
+    font-style: var(--document-paragraph-font-style);
+    text-align: center;
+    color: var(--default-text-color);
+  }
+
+  .navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: calc(100% + 100px);
+    height: 100%;
+    margin: 0 auto 0 -50px;
+    justify-content: space-between;
+    align-items: center;
+
+    .button {
+      display: block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      // background-color: black;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      user-select: none;
+      opacity: 1;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+
+  .meatballs {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+
+    .meatball {
+      width: 12px;
+      height: 12px;
+      margin: 0 8px;
+      border-radius: 6px;
+      background-color: black;
+      opacity: 0.3;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}
