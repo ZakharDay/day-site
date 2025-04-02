@@ -1,4 +1,11 @@
 @font-face {
+  font-family: 'Arial Narrow';
+  src: url('../fonts/Arial_Narrow_Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'PT Root UI';
   src: url('../fonts/PT-Root-UI_Light.woff2') format('woff2'),
     url('../fonts/PT-Root-UI_Light.woff') format('woff');
