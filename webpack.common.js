@@ -232,6 +232,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
+      template: './src/ru/club.html',
+      filename: './ru/club.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
       template: './src/ru/tutorials.html',
       filename: './ru/tutorials.html',
       chunks: ['index']
